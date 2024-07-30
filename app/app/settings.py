@@ -22,11 +22,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ni0)yrticj^a@vn@36r3n(o%e2b_m$wq66so!l(dp*vqlnqkv1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.100', '192.168.1.102']
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.100', '192.168.1.102', 'app.herokuapp.com']
 
 # Application definition
+
+import django_heroku
+django_heroku.settings(locals())
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
